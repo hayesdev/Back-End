@@ -14,6 +14,10 @@ async function add(operator) {
   return findBy({ id });
 }
 
+function remove(id) {
+  return db("operators").where({ id }).delete();
+}
+
 module.exports = {
   findBy,
   add,
